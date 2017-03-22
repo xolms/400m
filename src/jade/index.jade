@@ -2,9 +2,19 @@ extends template
 block title
 	title Главная
 block content
-	header.header
-        .header__triangle
-            .header__top
-               .header__phone
-            .header__bottom
-				p lorem
+	.topline.section_image
+		header.header
+			.header__triangle
+			.header__wrap
+				.header__frame
+					.header__phone
+						+phone
+						+phone
+					.header__top
+						.header__logo
+							h1.header__title СТроительная компания в Севастополе 400м2
+							.header__imgwrap
+								img(src="img/logo.png" alt="logo" class="header__img")
+					.header__bottom
+						button.header__button.button.button_orange связаться с нами
+						a(href="#" class="header__link") все услуги
