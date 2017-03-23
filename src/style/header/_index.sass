@@ -1,12 +1,15 @@
 .header
+	overflow: hidden
 	&__triangle
-		width: 100%
-		background: rgba(0,0,0,.7)
 		bottom: 0
 		right: 0
-		left: -35%
-		top: -300px
-		transform: rotate(-30deg)
+		top: 0
+		left: 0
+		max-height: 646px
+		background-repeat: no-repeat
+		background-image: url(../img/share.png)
+		background-position: right bottom
+		background-size: cover
 		position: absolute
 		z-index: 2
 	&__wrap
@@ -14,39 +17,89 @@
 		padding: 50px 0
 	&__frame
 		position: relative
-		&::before 
-			content: ''
-			width: 100%
-			max-width: 200px
-			top: 0
-			left: 0
-			position: absolute
-			height: 90px
-			border-left: 4px
-			border-top: 4px
-			border-style: solid
-			border-right: none
-			border-bottom: none
-			z-index: 4
-			border-color: $orange
-			display: block
-		&::after
-			content: ''
-			position: absolute
-			bottom: 0
-			display: block
-			right: 0
-			max-width: 200px
-			width: 100%
-			height: 90px
-			border-right: 4px
-			border-bottom: 4px
-			border-style: solid
-			border-top: none
-			border-left: none
-			z-index: 4
-			border-color: $black
+		z-index: 2
+		&.visible
+			&::before 
+				content: ''
+				width: 200px
+				top: 0
+				left: 0
+				position: absolute
+				height: 90px
+				border-left: 3px
+				border-top: 3px
+				border-style: solid
+				border-right: none
+				border-bottom: none
+				z-index: 4
+				border-color: $orange
+				display: block
+				animation-name: sneakleft
+				animation-duration: 1s
+			&::after
+				content: ''
+				position: absolute
+				bottom: 0
+				display: block
+				right: 0
+				width: 200px
+				height: 90px
+				border-right: 3px
+				border-bottom: 3px
+				border-style: solid
+				border-top: none
+				border-left: none
+				z-index: 4
+				border-color: $black
+				animation-name: sneakright
+				animation-duration: 1s
+
+	&__phone
+		text-align: right
 	&__top
 		text-align: center
-	&__phone
-		@include clearfix
+		padding-top: 20px
+	&__logo
+		+container(340px)
+	&__title
+		color: $white
+		font-size: 25px
+		font-family: "Exo2", serif
+		font-weight: 600
+		text-transform: uppercase
+		line-height: 40px
+		padding-bottom: 20px
+	&__metr
+		font-size: 30px
+		font-weight: 900
+		padding-left: 7px
+	&__imgwrap
+		border: 9px solid rgba(0,0,0, .1)
+		padding: 10px 0
+		text-align: center
+		+container(190px)
+	&__bottom
+		padding-top: 40px
+		text-align: center
+	&__button
+		width: 230px
+		height: 40px
+		line-height: 40px
+	&__buttonwrap
+		padding-bottom: 20px
+	&__link
+		color: #014661
+		font-size: 16px
+		font-family: "Exo2", serif
+		font-weight: normal
+		text-decoration: underline
+		transition: all .25s
+		cursor: pointer
+		display: inline-block
+		&:hover
+			color: lighten(#014661, 20%)
+	&__linkwrap
+		padding-bottom: 45px
+		&:hover
+			
+	
