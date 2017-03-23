@@ -1,0 +1,16 @@
+.button 
+	border: none
+	border-radius: 2px
+	outline: none
+	cursor: pointer
+	transition: all .25s
+	&_orange
+		background-color: $orange
+		color: $black
+		font-size: 18px
+		font-family: "OpenSans"
+		font-weight: normal
+		&:hover
+			background-color: lighten($orange, 10%)
+		&:focus
+			background-color: darken($orange, 10%)

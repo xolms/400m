@@ -1,0 +1,38 @@
+$deg: 7deg
+@keyframes sneakleft
+	0% 
+		height: 0
+		width: 0
+		top: 100%
+	50%
+		height: 90px
+		width: 0
+		top: 0
+	100%
+		width: 200px
+
+
+@keyframes sneakright
+	0%
+		height: 0
+		width: 0
+		bottom: 100%
+	50%
+		height: 90px
+		width: 0
+		bottom: 0
+	100%
+		width: 200px
+@keyframes phone
+	0%
+		transform: rotate($deg)
+	10%
+		transform: rotate(0deg)
+	20%
+		transform: rotate(-$deg)
+	30%
+		transform: rotate(0deg)
+	40%
+		transform: rotate($deg)
+	100%
+		transform: rotate($deg)
